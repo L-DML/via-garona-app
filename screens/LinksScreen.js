@@ -22,7 +22,7 @@ export default class LinksScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <MapView
-          style={{ alignSelf: 'stretch', height: 400 }}
+          style={{ alignSelf: 'stretch', height: 800 }}
           region={this.state.mapRegion}
           onRegionChange={this._handleMapRegionChange}
         >
@@ -48,8 +48,8 @@ export default class LinksScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+    // paddingTop: 15,
+    backgroundColor: 'pink',
   },
 });
 

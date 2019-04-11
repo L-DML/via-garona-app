@@ -30,25 +30,7 @@ export default class PointInteret extends React.Component {
         <View style={styles.container}>
             <ImageBackground source={{uri: "https://patrimoine.lesechos.fr/medias/2018/10/25/2216682_defiscalisation-lappel-de-la-foret-web-tete-06016836317.jpg"}}
             style={{width: '100%', height: '100%'}}>
-                <View style={styles.header}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.headerImage]}
-                        source={{uri: "https://cdn2.iconfinder.com/data/icons/pittogrammi/142/46-512.png"}}
-                    />
-                    <Text style={styles.listTitle}
-                    onPress={() => this.props.navigation.navigate('Home')}>ViaGarona13</Text>
-                    <TouchableHighlight
-                    style={styles.highlighter}
-                    underlayColor='grey'
-                    onPress={() => this.props.navigation.navigate('Vue43')}>
-                        <Image
-                            style={[styles.image, styles.whiteIcon, styles.headerImage]}
-                            source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png"}}
-                        />
-                    </TouchableHighlight>
-                </View>
-
-                <View>
+                <View style={styles.listHeader}>
                     <TextInput
                         style={styles.champ}
                         onChangeText={(text) => this.setState({recherche:text})}
@@ -93,9 +75,9 @@ const styles = StyleSheet.create({
         // flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-around',
-        backgroundColor: 'red',
+        backgroundColor: '#1F5070',
         marginTop: 10,
-        height: 100,
+        height: 50,
         padding: 10,
     },
     listFunc: {

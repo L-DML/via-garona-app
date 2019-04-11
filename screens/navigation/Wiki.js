@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         backgroundColor: 'red',
         marginTop: 10,
-        height: 100,
+        height: 50,
         padding: 10,
     },
     listFunc: {

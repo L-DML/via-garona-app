@@ -8,7 +8,6 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <AppNavigator />
-        {/* <Text style={styles.listFuncTitle}>Wiki</Text> */}
       </View>
     );
   }

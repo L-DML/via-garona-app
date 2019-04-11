@@ -12,7 +12,7 @@ import {
 
 //import MenuButton from '../components/MenuButton'
 
-export default class mainPointsInterets extends React.Component {
+export default class mainNavigation extends React.Component {
     
     render() {
         return (
@@ -20,93 +20,93 @@ export default class mainPointsInterets extends React.Component {
                 //   <MenuButton navigation={this.props.navigation} />
                 //   <Text style={styles.text}>Homee</Text>
                 // </View>
-                <View style={styles.container}>
+            <View style={styles.container}>
                 <ImageBackground
-                source={require("../../assets/images/home/background_home.jpg")}
-                style={{ flex: 1 }}>
-                
-                <View style={{ flex: 1, backgroundColor: 'rgba(100,100,100,0.6)' }}>
-                <View style={styles.tabBar}>
-                <TouchableHighlight
-                style={styles.highlighter}
-                underlayColor='grey'
-                onPress={() => this.props.navigation.navigate('MainItineraire')}>
-                <View style={styles.tabBarImageAndText}>
-                <Image
-                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                source={require("../../assets/images/home/tabBar/map.png")}
-                />
-                <Text style={styles.tabBarTitle}>Itinéraire</Text>
-                </View>
-                </TouchableHighlight>
-                
-                <TouchableHighlight
-                style={styles.highlighter}
-                underlayColor='grey'
-                onPress={() => this.props.navigation.navigate('MainPointsInterets')}>
-                <View style={styles.tabBarImageAndText}>
-                <Image
-                style={[styles.image, styles.blueIcon, styles.tabBarImage]}
-                source={require("../../assets/images/home/tabBar/icon-map-marker.png")}
-                />
-                <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
-                </View>
-                </TouchableHighlight>
-                
-                <TouchableHighlight
-                style={styles.highlighter}
-                underlayColor='grey'
-                onPress={() => this.props.navigation.navigate('MainNavigation')}>
-                <View style={styles.tabBarImageAndText}>
-                <Image
-                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                source={require("../../assets/images/home/tabBar/arrow.png")}
-                />
-                <Text style={styles.tabBarTitle}>Navigation</Text>
-                </View>
-                </TouchableHighlight>
-                </View>
-                
-                <View style={{
-                borderBottomColor: 'white',
-                borderBottomWidth: 3,
-                marginTop: 10,
-                marginLeft: 30,
-                marginRight: 30
-                }}
-                />
-                
+                    source={require("../../assets/images/home/background_home.jpg")}
+                    style={{ flex: 1 }}>
+
+                    <View style={{ flex: 1, backgroundColor: 'rgba(100,100,100,0.6)' }}>
+                        <View style={styles.tabBar}>
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('MainItineraire')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
+                                        style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                        source={require("../../assets/images/home/tabBar/map.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Itinéraire</Text>
+                                </View>
+                            </TouchableHighlight>
+
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('MainPointsInterets')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
+                                        style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                        source={require("../../assets/images/home/tabBar/icon-map-marker.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
+                                </View>
+                            </TouchableHighlight>
+
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('MainNavigation')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
+                                        style={[styles.image, styles.blueIcon, styles.tabBarImage]}
+                                        source={require("../../assets/images/home/tabBar/arrow.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Navigation</Text>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+
+                        <View style={{
+                            borderBottomColor: 'white',
+                            borderBottomWidth: 3,
+                            marginTop: 10,
+                            marginLeft: 30,
+                            marginRight: 30
+                        }}
+                        />
+
                         <View style={styles.listFunc}>
-                            <Text style={styles.listTitle}>Choisissez vos points d'intérêts</Text>
+                            <Text style={styles.listTitle}>Navigation</Text>
 
                             <View style={styles.listFuncLink}>
                                 <Image
                                     style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
                                     source={{ uri: "https://image.flaticon.com/icons/png/512/130/130188.png" }}
                                 />
-                                <Text style={styles.listFuncTitle}>En fonction d'une Ville</Text>
+                                <Text style={styles.listFuncTitle}>Vos Randonnées</Text>
+                            </View>
+
+                            <View style={styles.listFuncLink}>
+                                <Image
+                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                                    source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
+                                />
+                                <Text style={styles.listFuncTitle}>Réglages</Text>
                             </View>
 
                             <TouchableHighlight
                                 style={styles.highlighter}
                                 underlayColor='grey'
-                                onPress={() => this.props.navigation.navigate('PointInteret')}>
+                                onPress={() => this.props.navigation.navigate('Wiki')}>
                                 <View style={styles.listFuncLink}>
                                     <Image
                                         style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
+                                        source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
                                     />
-                                    <Text style={styles.listFuncTitle}>En fonctione du nom</Text>
+                                    <Text style={styles.listFuncTitle}>Wiki</Text>
                                 </View>
                             </TouchableHighlight>
-
-                            <View style={styles.listFuncLink}>
-                                <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
-                                />
-                                <Text style={styles.listFuncTitle}>En fonction de la catégorie</Text>
-                            </View>
                         </View>
                     </View>
 
@@ -242,3 +242,4 @@ const styles = StyleSheet.create({
                                  height: 15,
                                  },
                                  });
+

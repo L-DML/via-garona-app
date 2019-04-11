@@ -12,8 +12,8 @@ import {
 
 //import MenuButton from '../components/MenuButton'
 
-export default class mainPointsInterets extends React.Component {
-    
+export default class mainItineraire extends React.Component {
+ 
     render() {
         return (
                 // <View style={styles.container}>
@@ -33,7 +33,7 @@ export default class mainPointsInterets extends React.Component {
                 onPress={() => this.props.navigation.navigate('MainItineraire')}>
                 <View style={styles.tabBarImageAndText}>
                 <Image
-                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                style={[styles.image, styles.blueIcon, styles.tabBarImage]}
                 source={require("../../assets/images/home/tabBar/map.png")}
                 />
                 <Text style={styles.tabBarTitle}>Itinéraire</Text>
@@ -46,7 +46,7 @@ export default class mainPointsInterets extends React.Component {
                 onPress={() => this.props.navigation.navigate('MainPointsInterets')}>
                 <View style={styles.tabBarImageAndText}>
                 <Image
-                style={[styles.image, styles.blueIcon, styles.tabBarImage]}
+                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
                 source={require("../../assets/images/home/tabBar/icon-map-marker.png")}
                 />
                 <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
@@ -76,42 +76,42 @@ export default class mainPointsInterets extends React.Component {
                 }}
                 />
                 
-                        <View style={styles.listFunc}>
-                            <Text style={styles.listTitle}>Choisissez vos points d'intérêts</Text>
-
-                            <View style={styles.listFuncLink}>
-                                <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://image.flaticon.com/icons/png/512/130/130188.png" }}
-                                />
-                                <Text style={styles.listFuncTitle}>En fonction d'une Ville</Text>
-                            </View>
-
-                            <TouchableHighlight
-                                style={styles.highlighter}
-                                underlayColor='grey'
-                                onPress={() => this.props.navigation.navigate('PointInteret')}>
-                                <View style={styles.listFuncLink}>
-                                    <Image
-                                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
-                                    />
-                                    <Text style={styles.listFuncTitle}>En fonctione du nom</Text>
-                                </View>
-                            </TouchableHighlight>
-
-                            <View style={styles.listFuncLink}>
-                                <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
-                                />
-                                <Text style={styles.listFuncTitle}>En fonction de la catégorie</Text>
-                            </View>
-                        </View>
-                    </View>
-
+                <View style={styles.listFunc}>
+                <Text style={styles.listTitle}>Calculez votre itinéraire</Text>
+                
+                <TouchableHighlight
+                style={styles.highlighter}
+                underlayColor='grey'
+                onPress={() => this.props.navigation.navigate('Links')}>
+                <View style={styles.listFuncLink}>
+                <Image
+                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                source={{ uri: "https://image.flaticon.com/icons/png/512/130/130188.png" }}
+                />
+                <Text style={styles.listFuncTitle}>En fonction d'un point d'arrivé</Text>
+                </View>
+                </TouchableHighlight>
+                
+                <View style={styles.listFuncLink}>
+                <Image
+                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
+                />
+                <Text style={styles.listFuncTitle}>En fonction d'une distance</Text>
+                </View>
+                
+                <View style={styles.listFuncLink}>
+                <Image
+                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
+                />
+                <Text style={styles.listFuncTitle}>En fonction d'une durée</Text>
+                </View>
+                </View>
+                </View>
+                
                 </ImageBackground>
-            </View>
+                </View>
                 );
     }
 }
@@ -242,3 +242,5 @@ const styles = StyleSheet.create({
                                  height: 15,
                                  },
                                  });
+
+
