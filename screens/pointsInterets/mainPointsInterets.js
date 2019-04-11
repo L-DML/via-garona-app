@@ -8,106 +8,101 @@ import {
     Image
 } from 'react-native';
 
-// import styles from "../assets/Styles";
-
-//import MenuButton from '../components/MenuButton'
-
 export default class mainPointsInterets extends React.Component {
 
     render() {
-        return (
-            // <View style={styles.container}>
-            //   <MenuButton navigation={this.props.navigation} />
-            //   <Text style={styles.text}>Homee</Text>
-            // </View>
-            <View style={styles.container}>
-                <ImageBackground
-                    source={require("../assets/images/home/background_home.jpg")}
-                    style={{ flex: 1 }}>
+    return (
+        // <View style={styles.container}>
+        //   <MenuButton navigation={this.props.navigation} />
+        //   <Text style={styles.text}>Homee</Text>
+        // </View>
+        <View style={styles.container}>
+            <ImageBackground
+                source={require("../assets/images/home/background_home.jpg")}
+                style={{ flex: 1 }}>
 
-                    <View style={{ flex: 1, backgroundColor: 'rgba(100,100,100,0.6)' }}>
-                        <View style={styles.tabBar}>
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('mainItineraire')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
-                                            style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                            source={require("../assets/images/home/tabBar/map.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Itinéraire</Text>
-                                    </View>
-                                </TouchableHighlight>
-
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('mainPointsInterets')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
-                                        style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                        source={require("../assets/images/home/tabBar/icon-map-marker.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
-                                    </View>
-                                </TouchableHighlight>
-
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('mainNavigation')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
-                                        style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                        source={require("../assets/images/home/tabBar/arrow.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Navigation</Text>
-                                    </View>
-                                </TouchableHighlight>
-                        </View>
-
-                        <View style={{
-                            borderBottomColor: 'white',
-                            borderBottomWidth: 3,
-                            marginTop: 10,
-                            marginLeft: 30,
-                            marginRight: 30
-                        }}
-                        />
-
-                        <View style={styles.listFunc}>
-                            <Text style={styles.listTitle}>Navigation</Text>
-
-                            <View style={styles.listFuncLink}>
+                <View style={{ flex: 1, backgroundColor: 'rgba(100,100,100,0.6)' }}>
+                    <View style={styles.tabBar}>
+                        <TouchableHighlight
+                            style={styles.highlighter}
+                            underlayColor='grey'
+                            onPress={() => this.props.navigation.navigate('mainItineraire')}>
+                            <View style={styles.tabBarImageAndText}>
                                 <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://image.flaticon.com/icons/png/512/130/130188.png" }}
+                                    style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                    source={require("../assets/images/home/tabBar/map.png")}
                                 />
-                                <Text style={styles.listFuncTitle}>Vos randonnées</Text>
+                                <Text style={styles.tabBarTitle}>Itinéraire</Text>
                             </View>
+                        </TouchableHighlight>
 
-                            <View style={styles.listFuncLink}>
+                        <TouchableHighlight
+                            style={styles.highlighter}
+                            underlayColor='grey'
+                            onPress={() => this.props.navigation.navigate('mainPointsInterets')}>
+                            <View style={styles.tabBarImageAndText}>
                                 <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
+                                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                source={require("../assets/images/home/tabBar/icon-map-marker.png")}
                                 />
-                                <Text style={styles.listFuncTitle}>Réglages</Text>
+                                <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
                             </View>
+                        </TouchableHighlight>
 
-                            <View style={styles.listFuncLink}>
+                        <TouchableHighlight
+                            style={styles.highlighter}
+                            underlayColor='grey'
+                            onPress={() => this.props.navigation.navigate('mainNavigation')}>
+                            <View style={styles.tabBarImageAndText}>
                                 <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
+                                style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                source={require("../assets/images/home/tabBar/arrow.png")}
                                 />
-                                <Text style={styles.listFuncTitle}>Wiki</Text>
+                                <Text style={styles.tabBarTitle}>Navigation</Text>
                             </View>
-                        </View>
+                        </TouchableHighlight>
                     </View>
 
-                </ImageBackground>
-            </View>
-        );
+                    <View style={{
+                        borderBottomColor: 'white',
+                        borderBottomWidth: 3,
+                        marginTop: 10,
+                        marginLeft: 30,
+                        marginRight: 30
+                    }}
+                    />
+
+                    <View style={styles.listFunc}>
+                        <Text style={styles.listTitle}>Navigation</Text>
+
+                        <View style={styles.listFuncLink}>
+                            <Image
+                                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                                source={{ uri: "https://image.flaticon.com/icons/png/512/130/130188.png" }}
+                            />
+                            <Text style={styles.listFuncTitle}>Vos randonnées</Text>
+                        </View>
+
+                        <View style={styles.listFuncLink}>
+                            <Image
+                                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                                source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cog_font_awesome.svg/512px-Cog_font_awesome.svg.png" }}
+                            />
+                            <Text style={styles.listFuncTitle}>Réglages</Text>
+                        </View>
+
+                        <View style={styles.listFuncLink}>
+                            <Image
+                                style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                                source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
+                            />
+                            <Text style={styles.listFuncTitle}>Wiki</Text>
+                        </View>
+                    </View>
+                </View>
+            </ImageBackground>
+        </View>
+    );
     }
 }
 

@@ -43,7 +43,7 @@ export default class HomeScreen extends React.Component {
                             <TouchableHighlight
                                 style={styles.highlighter}
                                 underlayColor='grey'
-                                onPress={() => this.props.navigation.navigate('Settings')}>
+                                onPress={() => this.props.navigation.navigate('PointInteret')}>
                                 <View style={styles.tabBarImageAndText}>
                                     <Image
                                     style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
@@ -62,7 +62,7 @@ export default class HomeScreen extends React.Component {
                                     style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
                                     source={require("../assets/images/home/tabBar/arrow.png")}
                                     />
-                                    <Text style={styles.tabBarTitle}>Navigation</Text>
+                                    <Text style={styles.tabBarTitle}>Navigation-Burger</Text>
                                 </View>
                             </TouchableHighlight>
                         </View>

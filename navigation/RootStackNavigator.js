@@ -7,12 +7,10 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import BurgerScreen from '../screens/BurgerScreen';
 import Wiki from '../screens/navigation/Wiki';
+import PointInteret from '../screens/pointsInterets/PointInteret';
 
 const RootStackNavigator = createStackNavigator(
 	{
-		Wiki: {
-			screen: Wiki
-		},
 		Home: {
 			screen: HomeScreen
 		},
@@ -24,6 +22,12 @@ const RootStackNavigator = createStackNavigator(
 		},
 		Burger: {
 			screen: BurgerScreen
+		},
+		Wiki: {
+			screen: Wiki
+		},
+		PointInteret: {
+			screen: PointInteret
 		},
 	},
 	{

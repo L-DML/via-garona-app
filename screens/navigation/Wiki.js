@@ -6,76 +6,70 @@ import {
     ImageBackground,
     TouchableHighlight,
     Image,
-    ScrollView
+    ScrollView,
+    TextInput,
+    Button,
+    FlatList
 } from 'react-native';
+
+import wiki from '../../data/wikiData';
+import WikiItem from '../navigation/WikiItem';
 
 export default class Wiki extends React.Component {
   static navigationOptions = {
     title: 'app.json',
+  };
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      recherche: ''
+    };
+  };
+
+  _userSignup() {
+    const recherche = this.state.recherche;
+    console.log("Recherche : " + recherche);
+    console.log("Recherche : " + this.state.recherche);
+
   };
 
     render() {
     return (
         <View style={styles.container}>
             <View style={styles.listHeader}>
-                <Image
-                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                    source={require("../../assets/images/home/tabBar/arrow.png")}
-                />
-                <Text style={styles.listTitle}>Bien préparer{"\n"}sa randonnée</Text>
+                <TouchableHighlight
+                style={{ flex: 1, justifyContent: 'center' }}
+                onPress={() => this.props.navigation.navigate('Home')}>
+                    <Image
+                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                        source={require("../../assets/images/home/tabBar/arrow.png")}
+                    />
+                    <Text style={styles.listTitle}>Bien préparer{"\n"}sa randonnée</Text>
+                </TouchableHighlight>
             </View>
 
-            <ScrollView contentContainerStyle={styles.listFunc}>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>Avant de prendre la route, pensez à vérifier la météo sur l'intégralité du chemin.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>Un téléphone, une bouteille d'eau c'est utile.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>1-Prévenez un proche que vous partez randonnée, ou mieux : emmener le avec vous.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>2-Prévenez un proche que vous partez randonnée, ou mieux : emmener le avec vous.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>3-Prévenez un proche que vous partez randonnée, ou mieux : emmener le avec vous.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>4-Prévenez un proche que vous partez randonnée, ou mieux : emmener le avec vous.</Text>
-                </View>
-                <View style={styles.listFunc}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/map.png")}
-                    />
-                    <Text style={styles.listFuncTitle}>5-Prévenez un proche que vous partez randonnée, ou mieux : emmener le avec vous.</Text>
-                </View>
-            </ScrollView>
+            {/* <View>
+                <TextInput
+                    style={styles.champ}
+                    onChangeText={(text) => this.setState({recherche:text})}
+                    value={this.state.recherche}
+                    placeholder = "Vous avez un lieu en tête ?"
+                />
+                <Button
+                    style={styles.bouton}
+                    title="Rechercher"
+                    onPress={() => this.researchFromText() }
+                />
+            </View> */}
+
+            <View style={styles.main_container}>
+                <FlatList
+                    data={wiki}
+                    keyExtractor={(item) => item.id.toString()}
+                    renderItem={({item}) => <WikiItem wiki={item}/>}
+                />
+            </View>
         </View>
     )}
 }
