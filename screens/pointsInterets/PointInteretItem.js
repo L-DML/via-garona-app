@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 
 export default class PointInteretItem extends React.Component {
 	render() {
-		console.log(this.props);
+		// console.log(this.props);
 		const point = this.props.point
     return (
       <View style={styles.main_container}>

@@ -2,17 +2,14 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight,
  FlatList, TextInput, Button } from 'react-native';
 
-import point from '../data/pointsInteretsData';
+import point from '../../data/pointsInteretsData';
 import PointInteretItem from './PointInteretItem';
 // import styles from "./Styles"
 
 export default class PointInteret extends React.Component {
-	static navigationOptions = {
-		headerStyle: {
-			height: 0,
-			display: 'none'
-		},
-	};
+    static navigationOptions = {
+    title: 'app.json',
+    };
 
   constructor(props) {
     super(props);

@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Image } from 'react-native';
 
 export default class wikiItem extends React.Component {
 	render() {
-		console.log(this.props);
+		// console.log(this.props);
 		const wiki = this.props.wiki
     return (
       <View style={styles.main_container}>

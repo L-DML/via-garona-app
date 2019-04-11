@@ -41,11 +41,13 @@ export default class Wiki extends React.Component {
                 <TouchableHighlight
                 style={{ flex: 1, justifyContent: 'center' }}
                 onPress={() => this.props.navigation.navigate('Home')}>
-                    <Image
-                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                        source={require("../../assets/images/home/tabBar/arrow.png")}
-                    />
-                    <Text style={styles.listTitle}>Bien préparer{"\n"}sa randonnée</Text>
+                    <View>
+                        <Image
+                            style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                            source={require("../../assets/images/home/tabBar/arrow.png")}
+                        />
+                        <Text style={styles.listTitle}>Bien préparer{"\n"}sa randonnée</Text>
+                    </View>
                 </TouchableHighlight>
             </View>
 
