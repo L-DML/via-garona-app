@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import wiki from '../../data/wikiData';
-import WikiItem from '../navigation/WikiItem';
+import WikiItem from './WikiItem';
 
 export default class Wiki extends React.Component {
   static navigationOptions = {
@@ -22,16 +22,6 @@ export default class Wiki extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {
-      recherche: ''
-    };
-  };
-
-  _userSignup() {
-    const recherche = this.state.recherche;
-    console.log("Recherche : " + recherche);
-    console.log("Recherche : " + this.state.recherche);
-
   };
 
     render() {
@@ -50,20 +40,6 @@ export default class Wiki extends React.Component {
                     </View>
                 </TouchableHighlight>
             </View>
-
-            {/* <View>
-                <TextInput
-                    style={styles.champ}
-                    onChangeText={(text) => this.setState({recherche:text})}
-                    value={this.state.recherche}
-                    placeholder = "Vous avez un lieu en tête ?"
-                />
-                <Button
-                    style={styles.bouton}
-                    title="Rechercher"
-                    onPress={() => this.researchFromText() }
-                />
-            </View> */}
 
             <View style={styles.main_container}>
                 <FlatList
