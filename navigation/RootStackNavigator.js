@@ -6,23 +6,13 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import BurgerScreen from '../screens/BurgerScreen';
-// import mainItineraire from '../screens/itineraire/mainItineraire';
-// import mainPointsInterets from '../screens/pointsInterets/mainPointsInterets';
-// import mainNavigation from '../screens/navigation/mainNavigation';
-
-// import MenuDrawer from '../components/MenuDrawer';
-
-// const WIDTH = Dimensions.get('window').width;
-
-// const DrawerConfig = {
-// 	drawerWidth: WIDTH * 0.83,
-// 	contentComponent: ({ navigation }) => {
-// 		return(<MenuDrawer navigation={navigation} />)
-// 	}
-// }
+import Wiki from '../screens/navigation/Wiki';
 
 const RootStackNavigator = createStackNavigator(
 	{
+		Wiki: {
+			screen: Wiki
+		},
 		Home: {
 			screen: HomeScreen
 		},
@@ -34,12 +24,13 @@ const RootStackNavigator = createStackNavigator(
 		},
 		Burger: {
 			screen: BurgerScreen
-		}
+		},
 	},
 	{
 		defaultNavigationOptions: {
 			headerLeft: (
 				<TouchableHighlight
+				style={{ flex: 1}}
 				onPress={() => console.log('Sapins')}>
 					<Image
 						source={require('../assets/images/header/sapins.png')}
@@ -49,6 +40,7 @@ const RootStackNavigator = createStackNavigator(
 			),
 			headerRight: (
 				<TouchableHighlight
+				style={{ flex: 1}}
 				onPress={() => console.log('Burger')}>
 					<Image
 						source={require('../assets/images/header/burger.png')}
@@ -58,6 +50,7 @@ const RootStackNavigator = createStackNavigator(
 			),
 			headerTitle: (
 				<TouchableHighlight
+				style={{ flex: 1}}
 				onPress={() => console.log('Accueil')}>
 					<Image
 						source={require('../assets/images/header/via_garona_logo.png')}
@@ -76,7 +69,6 @@ const RootStackNavigator = createStackNavigator(
 			}
 		}
 	}
-	//DrawerConfig
 );
 
 export default RootStackNavigator;

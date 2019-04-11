@@ -27,44 +27,44 @@ export default class HomeScreen extends React.Component {
 
                     <View style={{ flex: 1, backgroundColor: 'rgba(100,100,100,0.6)' }}>
                         <View style={styles.tabBar}>
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('Links')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
-                                            style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                            source={require("../assets/images/home/tabBar/map.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Itinéraire</Text>
-                                    </View>
-                                </TouchableHighlight>
-
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('Settings')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('Links')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
                                         style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                        source={require("../assets/images/home/tabBar/icon-map-marker.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
-                                    </View>
-                                </TouchableHighlight>
+                                        source={require("../assets/images/home/tabBar/map.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Itinéraire</Text>
+                                </View>
+                            </TouchableHighlight>
 
-                                <TouchableHighlight
-                                    style={styles.highlighter}
-                                    underlayColor='grey'
-                                    onPress={() => this.props.navigation.navigate('Settings')}>
-                                    <View style={styles.tabBarImageAndText}>
-                                        <Image
-                                        style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
-                                        source={require("../assets/images/home/tabBar/arrow.png")}
-                                        />
-                                        <Text style={styles.tabBarTitle}>Navigation</Text>
-                                    </View>
-                                </TouchableHighlight>
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('Settings')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
+                                    style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                    source={require("../assets/images/home/tabBar/icon-map-marker.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Points d'intérêts</Text>
+                                </View>
+                            </TouchableHighlight>
+
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('Burger')}>
+                                <View style={styles.tabBarImageAndText}>
+                                    <Image
+                                    style={[styles.image, styles.whiteIcon, styles.tabBarImage]}
+                                    source={require("../assets/images/home/tabBar/arrow.png")}
+                                    />
+                                    <Text style={styles.tabBarTitle}>Navigation</Text>
+                                </View>
+                            </TouchableHighlight>
                         </View>
 
                         <View style={{
@@ -95,13 +95,18 @@ export default class HomeScreen extends React.Component {
                                 <Text style={styles.listFuncTitle}>Réglages</Text>
                             </View>
 
-                            <View style={styles.listFuncLink}>
-                                <Image
-                                    style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
-                                    source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
-                                />
-                                <Text style={styles.listFuncTitle}>Wiki</Text>
-                            </View>
+                            <TouchableHighlight
+                                style={styles.highlighter}
+                                underlayColor='grey'
+                                onPress={() => this.props.navigation.navigate('Wiki')}>
+                                <View style={styles.listFuncLink}>
+                                    <Image
+                                        style={[styles.image, styles.whiteIcon, styles.listFuncImage]}
+                                        source={{ uri: "https://static.thenounproject.com/png/370619-200.png" }}
+                                    />
+                                    <Text style={styles.listFuncTitle}>Wiki</Text>
+                                </View>
+                            </TouchableHighlight>
                         </View>
                     </View>
 
